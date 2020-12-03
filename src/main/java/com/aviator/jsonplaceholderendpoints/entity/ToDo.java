@@ -63,6 +63,6 @@ public class ToDo implements Serializable {
     @Column
     private boolean completed;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     UserModel userModel;
 }

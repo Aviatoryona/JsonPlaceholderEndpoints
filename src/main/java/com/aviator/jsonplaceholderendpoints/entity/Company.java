@@ -13,7 +13,7 @@ import lombok.ToString;
 public class Company {
 
     @Column(name = "COMPANY_NAME")
-    private String companyName;
+    private String name;
 
     @Column
     private String catchPhrase;

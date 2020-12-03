@@ -75,7 +75,7 @@ public class Post implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     UserModel userModel;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "post")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "post")
     List<Comment> comments;
 
 }

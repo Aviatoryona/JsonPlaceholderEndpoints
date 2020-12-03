@@ -94,15 +94,15 @@ public class UserModel implements Serializable {
     private Company company;
 
     @FieldDescription(description = "A user can have many posts")
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userModel")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userModel")
     List<Post> posts;
 
     @FieldDescription(description = "A user can have many albums")
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userModel")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userModel")
     List<Album> albums;
 
     @FieldDescription(description = "A user can have many Todos")
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "userModel")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "userModel")
     List<ToDo> toDos;
 
 }
